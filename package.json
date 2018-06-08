@@ -2,14 +2,15 @@
   "name": "portfolio",
   "version": "1.0.0",
   "main": "src/index.js",
+  "homepage": "https://eyvetesou.github.io/portfolio",
   "scripts": {
-    "start:dev": "webpack-dev-server"
+    "start:dev": "webpack-dev-server",
+    "build": "webpack --config ./webpack.config.js --progress --colors",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -b master -d build"
   },
   "babel": {
-    "presets": [
-      "es2015",
-      "react"
-    ]
+    "presets": ["es2015", "react"]
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
@@ -24,5 +25,8 @@
     "webpack": "^4.10.1",
     "webpack-cli": "^2.1.4",
     "webpack-dev-server": "^3.1.4"
+  },
+  "dependencies": {
+    "gh-pages": "^1.2.0"
   }
 }

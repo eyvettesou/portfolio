@@ -9,7 +9,7 @@ class App extends React.Component {
         <div class="header">
           <ul>
             <li>
-              <a href="/">Abouts</a>
+              <a href="/">About</a>
             </li>
             <li>
               <a href="/">Portfolio</a>
