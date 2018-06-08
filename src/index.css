@@ -1,9 +1,9 @@
 html {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 .header {
-  font-family: "Oswald", sans-serif;
+  font-family: 'Oswald', sans-serif;
 }
 
 .header ul {
@@ -29,6 +29,9 @@ html {
   color: salmon;
 }
 
+.body {
+  background-color: green;
+}
 .app {
   background-color: blue;
 }

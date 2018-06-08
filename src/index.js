@@ -1,5 +1,6 @@
-import React from "react";
-import ReactDOM from "react-dom";
+import React from 'react'
+import ReactDOM from 'react-dom'
+import css from './index.css'
 
 class App extends React.Component {
   render() {
@@ -8,7 +9,7 @@ class App extends React.Component {
         <div class="header">
           <ul>
             <li>
-              <a href="/">About</a>
+              <a href="/">Abouts</a>
             </li>
             <li>
               <a href="/">Portfolio</a>
@@ -18,11 +19,15 @@ class App extends React.Component {
             </li>
           </ul>
         </div>
-        <div class="app">This is the body I guess</div>
+        <div className={'body'}>This is the body I guess</div>
       </div>
-    );
+    )
   }
 }
 
-var mountNode = document.getElementById("app");
-ReactDOM.render(<App />, mountNode);
+var mountNode = document.getElementById('app')
+ReactDOM.render(<App />, mountNode)
+
+if (module.hot) {
+  module.hot.accept()
+}

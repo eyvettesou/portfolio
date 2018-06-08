@@ -1,20 +1,34 @@
-const webpack = require("webpack");
-const path = require("path");
+const webpack = require('webpack')
+const path = require('path')
 
 const config = {
-  entry: "./src/index.js",
+  entry: './src/index.js',
   output: {
-    path: path.resolve(__dirname, "src"),
-    filename: "assets/bundle.js"
+    path: path.resolve(__dirname, 'src'),
+    filename: 'assets/bundle.js'
   },
+  devtool: 'inline-source-map',
+  devServer: {
+    hot: true,
+    contentBase: path.resolve(__dirname, 'src')
+  },
+  plugins: [new webpack.HotModuleReplacementPlugin()],
   module: {
     rules: [
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        use: "babel-loader"
+        use: 'babel-loader'
+      },
+      {
+        test: /\.jsx$/,
+        use: 'react-hot-loader'
+      },
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader']
       }
     ]
   }
-};
-module.exports = config;
+}
+module.exports = config
