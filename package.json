@@ -7,7 +7,7 @@
     "start:dev": "webpack-dev-server",
     "build": "webpack --config ./webpack.config.js --progress --colors",
     "predeploy": "yarn build",
-    "deploy": "develop -d build"
+    "deploy": "gh-pages -d build"
   },
   "babel": {
     "presets": ["es2015", "react"]
