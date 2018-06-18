@@ -1,24 +1,8 @@
 # Portfolio
-~ Under Construction ~
+Currently under construction. 
 
-# Progress
-## Done
-- Draw out rough mocks of website (5/29/18)
-- Create react application without `create-react-app` (5/29/18)
-   - install webpack
-   - install babel
-   - install react/react-dom
-   - learned to manage `package.json` and `webpack.config.js`
-
-## To do
-- Learn how to install and use cool webpack add-ons and node packages:
-   - css-loader
-   - style-loaders
-   - babel-loader
-   - react-hot-loader
-   - clean-webpack-plugin
-   - html-webpack-plugin
-   - uglifyjs-webpack-plugin
+# :hotsprings: Status :hotsprings:
+## :large_orange_diamond: In Progress
 - Create basic wireframe of landing page/layout
 - Fill in content for landing page (large photo stream)
 - Fill in content for `About` page
@@ -32,3 +16,19 @@
   - use firebase as a db
 - Add animations to landing page (photo stream)
 - Add animations to page transition
+
+## :white_check_mark:  Done
+- Draw out rough mocks of website (5/29/18)
+- Create react application without `create-react-app` (5/29/18)
+  - install webpack
+  - install babel
+  - install react/react-dom
+  - learned to manage `package.json` and `webpack.config.js`
+- Learn how to install and use cool webpack add-ons and node packages:
+  - css-loader
+  - style-loaders
+  - babel-loader
+  - react-hot-loader
+  - :star: _clean-webpack-plugin_
+  - :star: _html-webpack-plugin_
+  - :star: _uglifyjs-webpack-plugin_
