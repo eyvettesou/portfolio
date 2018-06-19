@@ -4,7 +4,7 @@
   "main": "src/index.js",
   "homepage": "https://eyvetesou.github.io/portfolio",
   "scripts": {
-    "start:dev": "webpack-dev-server",
+    "dev": "webpack-dev-server",
     "build": "webpack --config ./webpack.config.js --progress --colors",
     "predeploy": "yarn build",
     "deploy": "gh-pages -d assets"

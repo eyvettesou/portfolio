@@ -12,6 +12,7 @@ const config = {
     hot: true,
     contentBase: path.resolve(__dirname, 'src')
   },
+  performance: { hints: false },
   plugins: [new webpack.HotModuleReplacementPlugin()],
   module: {
     rules: [
