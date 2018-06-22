@@ -40,7 +40,7 @@ class App extends React.Component {
     }
 
     return (
-      <div>
+      <div class="main">
         <div class="header">
           <ul>
             <li>
@@ -57,7 +57,9 @@ class App extends React.Component {
             </li>
           </ul>
         </div>
-        {currentContainer}
+        <div class="content">
+          {currentContainer}
+        </div>
       </div>
     )
   }
