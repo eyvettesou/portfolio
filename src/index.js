@@ -6,27 +6,35 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      container: 0,
+      container: 'home',
     }
+
+    this.pageUpdate = this.pageUpdate.bind(this)
+  }
+
+  pageUpdate(container) {
+    this.setState({
+      container: container
+    })
   }
 
   render() {
     let currentContainer;
 
     switch(this.state.container){
-      case 0:
+      case 'home':
         currentContainer = <Home />;
         break;
-      case 1:
+      case 'about':
         currentContainer = <About />;
         break;
-      case 2:
+      case 'portfolio':
         currentContainer = <Portfolio />;
         break;
-      case 3:
+      case 'stats':
         currentContainer = <Stats />;
         break;
-      case 4:
+      case 'contact':
         currentContainer = <Contact />;
         break;
     }
@@ -36,16 +44,16 @@ class App extends React.Component {
         <div class="header">
           <ul>
             <li>
-              <a href="/">About</a>
+              <a onClick={() => {this.pageUpdate('about')}}>About</a>
             </li>
             <li>
-              <a href="/">Portfolio</a>
+              <a onClick={() => {this.pageUpdate('portfolio')}}>Portfolio</a>
             </li>
             <li>
-              <a href="/">Stats</a>
+              <a onClick={() => {this.pageUpdate('stats')}}>Stats</a>
             </li>
             <li>
-              <a href="/">Contact</a>
+              <a onClick={() => {this.pageUpdate('contact')}}>Contact</a>
             </li>
           </ul>
         </div>

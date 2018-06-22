@@ -27,6 +27,7 @@ html {
 
 .header a:hover {
   color: salmon;
+  cursor: pointer;
 }
 
 .body {
