@@ -68,6 +68,10 @@ a:hover {
   font-weight: 700;
 }
 
+.selected {
+  font-weight: 700;
+}
+
 .content {
   background-color: #c6c7c4;
   color: #444444;
@@ -78,21 +82,21 @@ a:hover {
 }
 
 .home {
-  background-color: #c6c7c4;
+  background-color: #93a3b1;
   padding: 20px;
   width: 100%;
   height: 100%;
 }
 
 .about {
-  background-color: #eddede;
+  background-color: #E8CCBF;
   padding: 20px;
   width: 100%;
   height: 100%;
 }
 
 .resume {
-  background-color: #93a3b1;
+  background-color: #c6c7c4;
   padding: 20px;
   width: 100%;
   height: 100%;
@@ -106,7 +110,7 @@ a:hover {
 }
 
 .status {
-  background-color: #eddede;
+  background-color: #73877B;
   padding: 20px;
   width: 100%;
   height: 100%;
