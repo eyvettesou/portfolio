@@ -1,6 +1,8 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import css from './index.css'
+import React from 'react';
+import ReactDOM from 'react-dom';
+import css from './index.css';
+import mainPhoto from './assets/portfolio_photo.png';
+import statsData from './stats_data.js';
 
 class App extends React.Component {
   constructor(props) {
@@ -54,7 +56,7 @@ class App extends React.Component {
               <a onClick={() => {this.pageUpdate('portfolio')}} className={this.state.container == 'portfolio' ? 'selected' : null}>Portfolio</a>
             </li>
             <li>
-              <a onClick={() => {this.pageUpdate('status')}} className={this.state.container == 'status' ? 'selected' : null}>Status</a>
+              <a onClick={() => {this.pageUpdate('status')}} className={this.state.container == 'status' ? 'selected' : null} statsData={statsData}>Status</a>
             </li>
           </ul>
         </div>
@@ -77,7 +79,20 @@ const Home = () => {
 const About = () => {
   return (
     <div className="about">
-      About.
+      <img src={mainPhoto} className="main_photo"/>
+      <div className="about-details">
+        <span className="heading">Software Developer</span>
+        <p>
+          I am currently a Quality Assurance Engineer at Procore Technologies.
+          Over the past few years, I have gained a strong interest in front end design and development which has lead me to where I am today.
+        </p>
+        <span className="heading">Contact Info</span>
+        <br /> <br />
+        <ul>
+          <li><a href="https://github.com/eyvettesou/">Github</a></li>
+          <li><a href="https://www.linkedin.com/in/eyvettesou/">LinkedIn</a></li>
+        </ul>
+      </div>
     </div>
   )
 }
@@ -90,10 +105,19 @@ const Portfolio = () => {
   )
 }
 
-const Status = () => {
+const Status = ({statsData}) => {
+  function row(statsData){
+    console.log(statsData)
+    return(<tr><td></td></tr>)
+  }
+
   return (
     <div className="status">
-      Status.
+      <table>
+        <tbody>
+          {row()}
+        </tbody>
+      </table>
     </div>
   )
 }
