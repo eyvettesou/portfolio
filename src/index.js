@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import css from './index.css';
 import mainPhoto from './assets/portfolio_photo.png';
-import statsData from './stats_data.js';
+import { statsData } from './stats_data.js';
 
 class App extends React.Component {
   constructor(props) {
@@ -37,7 +37,7 @@ class App extends React.Component {
         currentContainer = <Portfolio />;
         break;
       case 'status':
-        currentContainer = <Status />;
+        currentContainer = <Status statsData={statsData} />;
         break;
     }
 
@@ -106,16 +106,68 @@ const Portfolio = () => {
 }
 
 const Status = ({statsData}) => {
-  function row(statsData){
-    console.log(statsData)
-    return(<tr><td></td></tr>)
+  const quarters = statsData
+    .map( (stat) => {return stat.quarter} )
+    .filter((element, position, self) => {
+      return (self.indexOf(element) == position);
+    })
+
+  function tasksByQuarter(statsData){
+    return(
+      quarters.map( (quarter) => {
+        return(
+          <tbody>
+            <tr><td colSpan={3}><h2>{`QUARTER ${quarter}`}</h2></td></tr>
+            {header()}
+            {row(statsData, quarter)}
+            <tr><td colSpan={3}>&nbsp;</td></tr>
+          </tbody>
+        )
+      })
+    )
+  }
+
+  function header(){
+    return (
+      <tr>
+        <td className="status-row status-task"><h3>Task</h3></td>
+        <td className="status-row status-references"><h3>References</h3></td>
+        <td className="status-row status-status"><h3>Status</h3></td>
+      </tr>
+    )
+  }
+
+  function row(statsData, quarter){
+    return(
+      statsData
+        .filter( (stat) => {
+          return(stat.quarter == quarter)
+        })
+        .map( (stat) => {
+          const references = stat.references.map( (reference) => {
+            return (
+              <span>
+                <a href={reference} target="_blank">{reference}</a><br />
+              </span>
+            )
+          })
+
+          return (
+            <tr>
+              <td className="status-row status-task ">{stat.task}</td>
+              <td className="status-row status-references">{references}</td>
+              <td className="status-row status-status">{stat.status}</td>
+            </tr>
+          )
+        })
+    )
   }
 
   return (
     <div className="status">
       <table>
         <tbody>
-          {row()}
+          {tasksByQuarter(statsData)}
         </tbody>
       </table>
     </div>

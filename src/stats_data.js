@@ -1,140 +1,178 @@
-[
+export const statsData = [
   {
     task:	"Understand Partial Application (JS)",
-    reference: "http://benalman.com/news/2012/09/partial-application-in-javascript/",
-    status: "done"
+    references: ["http://benalman.com/news/2012/09/partial-application-in-javascript/"],
+    status: "done",
+    quarter: 1
   },
   {
     task:	"Understand Currying (JS)",
-    reference: null,
-    status: "done"
+    references: [],
+    status: "done",
+    quarter: 1
   },
   {
     task:	"Understand spread operator (JS)",
-    reference: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax",
-    status:	"done"
+    references: ["https://developer.mozilla.org/en-US/docs/Web/JavaScript/references/Operators/Spread_syntax"],
+    status:	"done",
+    quarter: 1
   },
   {
     task:	"Understand High Order Function (JS)",
-    reference: null,
-    status: "done"
+    references: [],
+    status: "done",
+    quarter: 1
   },
   {
     task:	"Undestand different types of testing (Ruby)",
-    reference: "http://www.asktester.com/smoke-test-vs-sanity-test-vs-retest-vs-regression-test/",
-    status: "done"
+    references: ["http://www.asktester.com/smoke-test-vs-sanity-test-vs-retest-vs-regression-test/"],
+    status: "done",
+    quarter: 1
   },
   {
     task:	"Understand self methods (Ruby)",
-    reference: "http://blog.honeybadger.io/ruby-self-cheat-sheet/",
-    status: "done"
+    references: ["http://blog.honeybadger.io/ruby-self-cheat-sheet/"],
+    status: "done",
+    quarter: 1
   },
   {
     task:	"Understand spy, dispatch, reducer (JS)",
-    reference: null,
-    status: "done"
+    references: [],
+    status: "done",
+    quarter: 1
   },
   {
     task:	"Learn to style HTML audio",
-    reference: "https://blogs.perficient.com/delivery/blog/2017/12/19/how-to-customize-your-own-html5-audio-player/, https://codepen.io/wssjq198913/pen/mqZKZO",
-    status: "open"
+    references:
+      [
+        "https://blogs.perficient.com/delivery/blog/2017/12/19/how-to-customize-your-own-html5-audio-player/",
+        "https://codepen.io/wssjq198913/pen/mqZKZO"
+      ],
+    status: "open",
+    quarter: 1
   },
   {
     task:	"Understand basic Webpack",
-    reference: "https://medium.com/webpack/webpack-4-released-today-6cdb994702d4",
-    status: "done"
+    references: ["https://medium.com/webpack/webpack-4-released-today-6cdb994702d4"],
+    status: "done",
+    quarter: 1
   },
   {
     task:	"Deep Work",
-    reference: null,
-    status: "in progress"
+    references: [],
+    status: "in progress",
+    quarter: 2
   },
   {
     task:	"Understand Redux",
-    reference: "https://egghead.io/courses/getting-started-with-redux",
-    status: "done"
+    references: ["https://egghead.io/courses/getting-started-with-redux"],
+    status: "done",
+    quarter: 2
   },
   {
     task:	"Understand method chaining (class methods vs instance methods) (Ruby)",
-    reference: "https://www.sitepoint.com/a-guide-to-method-chaining/",
-    status: "done"
+    references: ["https://www.sitepoint.com/a-guide-to-method-chaining/"],
+    status: "done",
+    quarter: 2
   },
   {
     task:	"Understand Polymorphism in Ruby",
-    reference: "https://robots.thoughtbot.com/back-to-basics-polymorphism-and-ruby",
-    status: "done"
+    references: ["https://robots.thoughtbot.com/back-to-basics-polymorphism-and-ruby"],
+    status: "done",
+    quarter: 2
   },
   {
     task:	"Understand JS fetch API",
-    reference: null,
-    status: "done"
+    references: [],
+    status: "done",
+    quarter: 2
   },
   {
     task:	"Understand JSX",
-    reference: "https://reactjs.org/docs/jsx-in-depth.html",
-    status: "open"
+    references: ["https://reactjs.org/docs/jsx-in-depth.html"],
+    status: "open",
+    quarter: 2
   },
   {
     task:	"Understand css, sass/scss",
-    reference: "https://sass-lang.com/guide",
-    status: "done"
+    references: ["https://sass-lang.com/guide"],
+    status: "done",
+    quarter: 2
   },
   {
     task:	"Create React app without `create-react-app`",
-    reference: "https://medium.com/@muthuks/setting-up-your-project-without-create-react-app-872ed782852a",
-    status: "done"
+    references: ["https://medium.com/@muthuks/setting-up-your-project-without-create-react-app-872ed782852a"],
+    status: "done",
+    quarter: 2
   },
   {
     task:	"Learn how to install and use cool webpack add-ons and node packages: css-loader, style-loaders, babel-loader, react-hot-loader, clean-webpack-plugin, html-webpack-plugin, uglifyjs-webpack-plugin",
-    reference: "https://medium.codylamson.com/minimum-viable-webpack-babel-react-setup-without-create-react-app-47959f43fbac",
-    status: "done"
+    references: ["https://medium.codylamson.com/minimum-viable-webpack-babel-react-setup-without-create-react-app-47959f43fbac"],
+    status: "done",
+    quarter: 2
   },
   {
     task:	"Understand css-modules",
-    reference: "https://github.com/css-modules/css-modules",
-    status: "done"
+    references: ["https://github.com/css-modules/css-modules"],
+    status: "done",
+    quarter: 2
   },
   {
     task:	"Understand Github Pages, firebase, domains	",
-    reference: "https://github.com/facebook/create-react-app/blob/master/packages/react-scripts/template/README.md#github https://help.github.com/articles/using-a-custom-domain-with-github-pages/",
-    status: "in progress"
+    references:
+      [
+        "https://github.com/facebook/create-react-app/blob/master/packages/react-scripts/template/README.md#github",
+        "https://help.github.com/articles/using-a-custom-domain-with-github-pages/"
+      ],
+    status: "in progress",
+    quarter: 2
   },
   {
     task:	"Node package - classNames",
-    reference: "https://www.npmjs.com/package/classnames",
-    status: "done"
+    references: ["https://www.npmjs.com/package/classnames"],
+    status: "done",
+    quarter: 2
   },
   {
     task:	"Create Portfolio",
-    reference: null,
-    status: "in progress"
+    references: [],
+    status: "in progress",
+    quarter: 2
   },
   {
     task:	"Eloquent Javascript",
-    reference: "http://eloquentjavascript.net/",
-    status: "open"},
+    references: ["http://eloquentjavascript.net/"],
+    status: "open",
+    quarter: 2
+  },
   {
     task:	"Set up CI - ",
-    reference: "https://github.com/elovejoy5/todos-ci-demo",
-    status: "open"},
+    references: ["https://github.com/elovejoy5/todos-ci-demo"],
+    status: "open",
+    quarter: 3
+  },
   {
     task:	"JS Animations",
-    reference: "https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_animations",
-    status: "open"
+    references: ["https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_animations"],
+    status: "open",
+    quarter: 3
   },
   {
     task:	"Practice a few sample quizzes",
-    reference: "https://www.gracehopper.com/admissions-preparation",
-    status: "open"
+    references: ["https://www.gracehopper.com/admissions-preparation"],
+    status: "open",
+    quarter: 3
   },
   {
     task:	"Speaking JavaScript - Dr. Axel Rauschmayer",
-    reference: "http://exploringjs.com/",
-    status: "open"
+    references: ["http://exploringjs.com/"],
+    status: "open",
+    quarter: 3
   },
   {
     task:	"Exploring ES6 - Dr. Axel Rauschmayer",
-    reference: "http://exploringjs.com/",
-    status: "open"
+    references: ["http://exploringjs.com/"],
+    status: "open",
+    quarter: 3
   }
 ]
