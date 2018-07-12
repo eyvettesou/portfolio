@@ -53,8 +53,11 @@ a , a:visited {
 .header {
   background-color: #f9f9f9;
   font-family: 'Assistant', sans-serif;
+  left: 0px;
   padding: 10px 20px 0px 20px;
-  position: fixed;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
   width: 100%;
   z-index: 1;
 }
@@ -100,22 +103,15 @@ a , a:visited {
 }
 
 .content {
-  background-color: #c6c7c4;
   color: #444444;
-  position: absolute;
-  width: 100%;
-  top: 80px;
-}
-
-.home {
-  background-color: #93a3b1;
-  padding: 20px;
   height: 100%;
+  padding: 20px;
+  width: 100%;
 }
 
 .about {
-  background-color: #E8CCBF;
-  padding: 20px;
+  display: flex;
+  flex-direction: row;
 }
 
 .about-details {
@@ -123,22 +119,6 @@ a , a:visited {
   margin-left: 20px;
   text-align: justify;
   max-width: 600px;
-}
-
-
-.resume {
-  background-color: #c6c7c4;
-  padding: 20px;
-}
-
-.portfolio {
-  background-color: #7c898b;
-  padding: 20px;
-}
-
-.status {
-  background-color: #73877B;
-  padding: 20px;
 }
 
 .status-row {
