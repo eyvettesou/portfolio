@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import css from './index.css';
-import mainPhoto from './assets/portfolio_photo.png';
-import { statsData } from './stats_data.js';
-import portfolioImage1 from './assets/image3.jpg';
-import portfolioImage2 from './assets/image6.jpg';
-import portfolioImage3 from './assets/image9.jpg';
+import './index.css';
 
+import Portfolio from './components/Portfolio';
+import Status from './components/Status';
+import { statsData } from './stats_data.js';
+
+import mainPhoto from './assets/portfolio_photo.png';
 
 class App extends React.Component {
   constructor(props) {
@@ -17,7 +17,7 @@ class App extends React.Component {
 
     this.pageUpdate = this.pageUpdate.bind(this)
   }
-  
+
   pageUpdate(container) {
     this.setState({
       container: container
@@ -60,7 +60,7 @@ class App extends React.Component {
               <a onClick={() => {this.pageUpdate('portfolio')}} className={this.state.container == 'portfolio' ? 'selected' : null}>Portfolio</a>
             </li>
             <li>
-              <a onClick={() => {this.pageUpdate('status')}} className={this.state.container == 'status' ? 'selected' : null} statsData={statsData}>Status</a>
+              <a onClick={() => {this.pageUpdate('status')}} className={this.state.container == 'status' ? 'selected' : null}  statsData={statsData}>Status</a>
             </li>
           </ul>
         </div>
@@ -80,8 +80,8 @@ class Home extends React.Component {
   render() {
     return (
       <div>
-        <img src={portfolioImage1} alt='magic8ball'/>
-        <div>{`<`}</div>
+        <Portfolio />
+        Hi this is me
       </div>
     )
   }
@@ -109,97 +109,6 @@ class About extends React.Component {
             <li><a href="https://www.linkedin.com/in/eyvettesou/">LinkedIn</a></li>
           </ul>
         </div>
-      </div>
-    )
-  }
-}
-
-class Portfolio extends React.Component {
-  componentDidMount() {
-    document.body.style.backgroundColor = '#7c898b'
-  }
-
-  render() {
-    return (
-      <div>
-        Portfolio
-      </div>
-    )
-  }
-}
-
-class Status extends React.Component {
-  componentDidMount() {
-    document.body.style.backgroundColor = '#73877B'
-  }
-
-  render() {
-    const { statsData } = this.props;
-
-    const quarters = statsData
-      .map( (stat) => {return stat.quarter} )
-      .filter((element, position, self) => {
-        return (self.indexOf(element) == position);
-      })
-
-    const tasksByQuarter = (statsData) => {
-      return(
-        quarters.map( (quarter) => {
-          return(
-            <tbody>
-              <tr><td colSpan={3}><h2>{`QUARTER ${quarter}`}</h2></td></tr>
-              {header()}
-              {row(statsData, quarter)}
-              <tr><td colSpan={3}>&nbsp;</td></tr>
-            </tbody>
-          )
-        })
-      )
-    }
-
-    const header = () => {
-      return (
-        <tr>
-          <td className="status-row status-task"><h3>Task</h3></td>
-          <td className="status-row status-references"><h3>References</h3></td>
-          <td className="status-row status-status"><h3>Status</h3></td>
-        </tr>
-      )
-    }
-
-    const row = (statsData, quarter) => {
-      return(
-        statsData
-          .filter( (stat) => {
-            return(stat.quarter == quarter)
-          })
-          .map( (stat) => {
-            const references = stat.references.map( (reference) => {
-              return (
-                <span>
-                  <a href={reference} target="_blank">{reference}</a><br />
-                </span>
-              )
-            })
-
-            return (
-              <tr>
-                <td className="status-row status-task ">{stat.task}</td>
-                <td className="status-row status-references">{references}</td>
-                <td className="status-row status-status">{stat.status}</td>
-              </tr>
-            )
-          })
-      )
-    }
-
-    return (
-      <div>
-        <table>
-          <tbody>
-            {tasksByQuarter(statsData)}
-          </tbody>
-        </table>
       </div>
     )
   }
