@@ -9,7 +9,6 @@ class Status extends React.Component {
   render() {
     const { statsData } = this.props;
 
-    console.log(statsData)
     const quarters = statsData
       .map( (stat) => {return stat.quarter} )
       .filter((element, position, self) => {

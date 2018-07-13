@@ -1,15 +1,13 @@
 # Portfolio
-Currently under construction. 
+Currently under construction.
 
 # :hotsprings: Status :hotsprings:
 ## :large_orange_diamond: In Progress
-- Create basic wireframe of landing page/layout
 - Fill in content for landing page (large photo stream)
 - Fill in content for `About` page
-- Fill in content for `Contact` page
 - Fill in content for `Portfolio` index page
 - Create repos for all projects and link to `Portfolio` index page
-- Add more deatiled css
+- Add more detailed css
 - Get it up so it's public and available for anyone to view
   - buy domain name
   - use github pages to host
@@ -32,3 +30,5 @@ Currently under construction.
   - :star: _clean-webpack-plugin_
   - :star: _html-webpack-plugin_
   - :star: _uglifyjs-webpack-plugin_
+  - Create basic wireframe of landing page/layout
+  - Fill in content for `Status` page
