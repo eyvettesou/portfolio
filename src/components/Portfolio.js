@@ -8,8 +8,52 @@ import image1 from '../assets/image3.jpg';
 import image2 from '../assets/image6.jpg';
 
 class Portfolio extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      active: '0'
+    };
+
+    this.handleScroll = this.handleScroll.bind(this);
+  }
+
   componentDidMount() {
-    document.body.style.backgroundColor = '#7c898b'
+    document.body.style.backgroundColor = '#7c898b';
+    window.addEventListener('scroll', this.handleScroll);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll);
+  }
+
+  handleScroll() {
+    let currentPosition = document.documentElement.scrollTop;
+
+    if ( (currentPosition > (document.getElementById("Demon Bro").offsetTop - 300)) && (currentPosition < (document.getElementById("Tommy Challenge").offsetTop - 300)) ) {
+      this.setState({
+        active: '0'
+      })
+    } else if ( currentPosition > (document.getElementById("Tommy Challenge").offsetTop - 300)  && (currentPosition < (document.getElementById("Meme Generator").offsetTop - 300)) ){
+      this.setState({
+        active: '1'
+      })
+    } else if ( currentPosition > (document.getElementById("Meme Generator").offsetTop  - 300)  && (currentPosition < (document.getElementById("Magic 8 Ball").offsetTop  - 300)) ){
+      this.setState({
+        active: '2'
+      })
+    } else if ( currentPosition > (document.getElementById("Magic 8 Ball").offsetTop  - 300)  && (currentPosition < (document.getElementById("Volatility").offsetTop  - 300)) ){
+      this.setState({
+        active: '3'
+      })
+    } else if ( currentPosition > (document.getElementById("Volatility").offsetTop  - 300)  && (currentPosition < (document.getElementById("Portfolio v1").offsetTop  - 300)) ){
+      this.setState({
+        active: '4'
+      })
+    } else if ( currentPosition > (document.getElementById("Portfolio v1").offsetTop  - 300) ){
+      this.setState({
+        active: '5'
+      })
+    }
   }
 
   render() {
@@ -21,7 +65,7 @@ class Portfolio extends React.Component {
         previews: [image1, image2]
       },
       {
-        name: "Tommy Challenege",
+        name: "Tommy Challenge",
         description: "Built the front end in HTML, CSS, and JS. The Tommy Challenge is an application that will randomly select a word and then proceed to find a song title with the word in it every month. Music producers will have one month to remix the song and submit it to Tommy Challenege. Users can come in and listen to all submissions for the month and give feedback.",
         links: ["https://github.com/bobcats/tommychallenge"],
         previews: [image1]
@@ -87,7 +131,7 @@ class Portfolio extends React.Component {
               portfolioData.map( (item, index) => {
                 return (
                   <li className="portfolio__nav-items">
-                  <a href={`#${item.name}`}>{`0${index+1}`}</a>
+                    <a href={`#${item.name}`} className={ (this.state.active == index ? 'portfolio__nav-items--active' : null) }>{`0${index+1}`}</a>
                   </li>
                 )
               })
