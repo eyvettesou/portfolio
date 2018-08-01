@@ -7,7 +7,7 @@
     "dev": "webpack-dev-server",
     "build": "webpack --config ./webpack.config.js --progress --colors",
     "predeploy": "yarn build",
-    "deploy": "gh-pages -d assets"
+    "deploy": "gh-pages -d _site"
   },
   "babel": {
     "presets": [
