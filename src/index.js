@@ -80,7 +80,6 @@ class Home extends React.Component {
   render() {
     return (
       <div>
-        <Portfolio />
         Hi this is me
       </div>
     )

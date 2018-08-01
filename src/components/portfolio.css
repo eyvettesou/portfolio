@@ -16,6 +16,17 @@
   top: 30%;
 }
 
+.portfolio__thumbnail {
+  border-radius: 10px;
+  opacity: 0.6;
+  transition-duration: 0.5s;
+}
+
+.portfolio__thumbnail:hover{
+  opacity: 1;
+  transition-duration: 0.5s;
+}
+
 .porfolio__content-container {
   display: flex;
   flex-direction: column;
@@ -25,7 +36,7 @@
 .portfolio__content {
   display: inline-flex;
   height: 100%;
-  margin: 80px 50px 120px 50px;
+  margin: 100px 50px 120px 50px;
   max-height: 600px;
 }
 
@@ -49,6 +60,10 @@
   justify-content: center;
   padding: 10px 20px;
   width: 100%;
+}
+
+.portfolio__details ul {
+  list-style-type: circle;
 }
 
 .portfolio__details-name {
