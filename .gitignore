@@ -1,4 +1,3 @@
-.gitignore
 *.log
 .changelog
 .DS_Store
@@ -8,4 +7,3 @@ build
 node_modules
 .changelog
 packages/**/CHANGELOG.md
-_site
