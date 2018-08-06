@@ -91,13 +91,6 @@ a , a:visited {
   font-weight: 700;
 }
 
-.heading {
-  font-weight: 700;
-  text-transform: uppercase;
-  font-size: 24px;
-  letter-spacing: 2px;
-}
-
 .selected {
   font-weight: 700;
 }
@@ -108,17 +101,6 @@ a , a:visited {
   width: 100%;
 }
 
-.about {
-  display: flex;
-  flex-direction: row;
-}
-
-.about-details {
-  margin-top: 20px;
-  margin-left: 20px;
-  text-align: justify;
-  max-width: 600px;
-}
 
 .status-row {
   border-bottom: 1px solid #444444;
@@ -136,11 +118,4 @@ a , a:visited {
   min-width: 100px;
   text-align: center;
   text-transform: capitalize;
-}
-
-.status-row {
-}
-
-.main_photo {
-  max-height: 589px;
 }
