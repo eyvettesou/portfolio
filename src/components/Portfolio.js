@@ -8,6 +8,7 @@ import magicball from '../assets/magicball-thumbnail.png';
 import memeGenerator from '../assets/meme-generator-thumbnail.png';
 import volatility from '../assets/volatility-thumbnail.png';
 import demonBro from '../assets/demonbro-thumbnail.png';
+import tommyChallenge from '../assets/tommy-challenge-thumbnail.png';
 
 class Portfolio extends React.Component {
   constructor(props) {
@@ -118,7 +119,7 @@ class Portfolio extends React.Component {
         name: "Tommy Challenge",
         description: "Built the front end in HTML, CSS, and JS. The Tommy Challenge is an application that will randomly select a word and then proceed to find a song title with the word in it every month. Music producers will have one month to remix the song and submit it to Tommy Challenege. Users can come in and listen to all submissions for the month and give feedback.",
         links: ["https://github.com/bobcats/tommychallenge"],
-        previews: [memeGenerator],
+        previews: [tommyChallenge],
         lessons: [
           "I wanted to take a step back from React and fully understanding Javascript since React is just a framework built upon the Javascript API.",
           "This project helped me fully understand what the DOM is and what the React framework is suppose to help solve.",
