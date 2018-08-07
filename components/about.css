@@ -1,0 +1,81 @@
+.about {
+  display: flex;
+  flex-direction: row;
+  letter-spacing: 0.18px;
+}
+
+.about ul {
+  list-style-type: circle;
+  margin-left: 30px;
+}
+
+.about-details {
+  margin-top: 20px;
+  margin-left: 20px;
+  text-align: justify;
+  max-width: 900px;
+}
+
+.heading, .markdown h1 {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 24px;
+  letter-spacing: 2px;
+}
+
+.about-general_info {
+  max-width: 600px;
+  margin: 0px 40px;
+}
+
+.main_photo {
+  max-height: 589px;
+}
+
+.link--image {
+  height: 20px;
+}
+
+.markdown ul {
+  list-style-type: circle;
+  list-style-position: inside;
+}
+
+h2, .markdown h2 {
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+.markdown h3 {
+  font-weight: 700;
+  font-style: italic;
+  font-size: 14px;
+  letter-spacing: 0.75px;
+  margin-bottom: 10px;
+}
+
+.markdown ul {
+  margin-bottom: 30px;
+}
+
+.about-technical {
+  display: inline-flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.about-contact {
+  margin: 1em 0em;
+  justify-content: center;
+  letter-spacing: 0.75px;
+}
+
+.about-contact ul{
+  list-style-type: none;
+  display: inline-flex;
+}
+
+.about-contact li{
+  margin-left: 30px;
+}
