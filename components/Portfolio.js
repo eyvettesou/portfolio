@@ -21,7 +21,6 @@ class Portfolio extends React.Component {
   }
 
   componentDidMount() {
-    document.body.style.backgroundColor = '#7c898b';
     window.addEventListener('scroll', this.handleScroll);
   }
 
@@ -157,7 +156,7 @@ class Portfolio extends React.Component {
                     <span className="portfolio__details-name">{item.name}</span>
                     <p className="portfolio__details-description">{item.description}</p>
                     <h3>Lessons: </h3>
-                    <ul className="portfolio__details">
+                    <ul>
                       {
                         item.lessons.map( (lesson) => {
                           return(
