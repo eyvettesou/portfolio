@@ -1,11 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import './status.css';
 
 class Status extends React.Component {
-  componentDidMount() {
-    document.body.style.backgroundColor = '#73877B'
-  }
-
   render() {
     const { statsData } = this.props;
 
@@ -18,25 +15,26 @@ class Status extends React.Component {
     const tasksByQuarter = (statsData) => {
       return(
         quarters.map( (quarter) => {
-          return(
-            <tbody>
-              <tr><td colSpan={3}><h2>{`QUARTER ${quarter}`}</h2></td></tr>
-              {header()}
-              {row(statsData, quarter)}
-              <tr><td colSpan={3}>&nbsp;</td></tr>
-            </tbody>
-          )
+          return <div className="status-container">
+              <h2 className="status-quarter">{`• Quarter ${quarter} •`}</h2>
+              <table>
+                <thead>
+                  <tr>
+                    <th className="status-row status-task">
+                      <h3>Task</h3>
+                    </th>
+                    <th className="status-row status-references">
+                      <h3>References</h3>
+                    </th>
+                    <th className="status-row status-status">
+                      <h3>Status</h3>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>{row(statsData, quarter)}</tbody>
+              </table>
+            </div>;
         })
-      )
-    }
-
-    const header = () => {
-      return (
-        <tr>
-          <td className="status-row status-task"><h3>Task</h3></td>
-          <td className="status-row status-references"><h3>References</h3></td>
-          <td className="status-row status-status"><h3>Status</h3></td>
-        </tr>
       )
     }
 
@@ -68,11 +66,7 @@ class Status extends React.Component {
 
     return (
       <div>
-        <table>
-          <tbody>
-            {tasksByQuarter(statsData)}
-          </tbody>
-        </table>
+        {tasksByQuarter(statsData)}
       </div>
     )
   }

@@ -2,7 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
+import Home from './components/Home';
 import Portfolio from './components/Portfolio';
+import About from './components/About';
 import Status from './components/Status';
 import { statsData } from './stats_data.js';
 
@@ -34,9 +36,6 @@ class App extends React.Component {
       case 'about':
         currentContainer = <About />;
         break;
-      case 'resume':
-        currentContainer = <Resume />;
-        break;
       case 'portfolio':
         currentContainer = <Portfolio />;
         break;
@@ -54,9 +53,6 @@ class App extends React.Component {
               <a onClick={() => {this.pageUpdate('about')}} className={this.state.container == 'about' ? 'selected' : null}>About</a>
             </li>
             <li>
-              <a onClick={() => {this.pageUpdate('resume')}} className={this.state.container == 'resume' ? 'selected' : null}>Resume</a>
-            </li>
-            <li>
               <a onClick={() => {this.pageUpdate('portfolio')}} className={this.state.container == 'portfolio' ? 'selected' : null}>Portfolio</a>
             </li>
             <li>
@@ -67,61 +63,6 @@ class App extends React.Component {
         <div class="content" id="content">
           {currentContainer}
         </div>
-      </div>
-    )
-  }
-}
-
-class Home extends React.Component {
-  componentDidMount() {
-    document.body.style.backgroundColor = '#93a3b1'
-  }
-
-  render() {
-    return (
-      <div>
-        Hi this is me
-      </div>
-    )
-  }
-}
-
-class About extends React.Component {
-  componentDidMount() {
-    document.body.style.backgroundColor = '#E8CCBF'
-  }
-
-  render() {
-    return (
-      <div className="about">
-        <img src={mainPhoto} className="main_photo"/>
-        <div className="about-details">
-          <span className="heading">Software Developer</span>
-          <p>
-            I am currently a Quality Assurance Engineer at Procore Technologies.
-            Over the past few years, I have gained a strong interest in front end design and development which has lead me to where I am today.
-          </p>
-          <span className="heading">Contact Info</span>
-          <br /> <br />
-          <ul>
-            <li><a href="https://github.com/eyvettesou/">Github</a></li>
-            <li><a href="https://www.linkedin.com/in/eyvettesou/">LinkedIn</a></li>
-          </ul>
-        </div>
-      </div>
-    )
-  }
-}
-
-class Resume extends React.Component {
-  componentDidMount() {
-    document.body.style.backgroundColor = '#c6c7c4'
-  }
-
-  render() {
-    return (
-      <div>
-        Resume.
       </div>
     )
   }
