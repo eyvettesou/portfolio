@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
+import Home from './components/Home';
 import Portfolio from './components/Portfolio';
 import About from './components/About';
 import Status from './components/Status';
@@ -62,20 +63,6 @@ class App extends React.Component {
         <div class="content" id="content">
           {currentContainer}
         </div>
-      </div>
-    )
-  }
-}
-
-class Home extends React.Component {
-  componentDidMount() {
-    document.body.style.backgroundColor = '#93a3b1'
-  }
-
-  render() {
-    return (
-      <div>
-        Hi this is me
       </div>
     )
   }
