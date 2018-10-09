@@ -1,22 +1,41 @@
 import React from 'react';
 import './home.css';
 
+const quotes = [
+  `“It’s easy to dream, but much harder to execute it.”`,
+  `“Skills are cheap. Passion is priceless.”`,
+  `“No matter what you do, your job is to tell your story.”`,
+  `“Fear kills growth.”`,
+  `“If you live for the weekends and vacations, your shit is broken.”`,
+  `“Without hustle, talent will only carry you so far.”`,
+  `“There’s no reason to do shit you hate. None.”`
+]
+
 class Home extends React.Component {
-  render() {
-    const quotes = [
-      `“It’s easy to dream, but much harder to execute it.”`,
-      `“Skills are cheap. Passion is priceless.”`,
-      `“No matter what you do, your job is to tell your story.”`,
-      `“Fear kills growth.”`,
-      `“If you live for the weekends and vacations, your shit is broken.”`,
-      `“Without hustle, talent will only carry you so far.”`,
-      `“There’s no reason to do shit you hate. None.”`
-    ]
+  constructor(props){
+    super(props)
+
+    this.state = { quote: quotes[Math.floor(Math.random() * quotes.length)] };
+    this.generateNewQuote = this.generateNewQuote.bind(this);
+  }
+
+  generateNewQuote(){
+    const previousQuote = this.state.quote;
+    let newQuote = quotes[Math.floor(Math.random() * quotes.length)];
+
+    if(previousQuote === newQuote){
+      newQuote = quotes[Math.floor(Math.random() * quotes.length)];
+    }
     
+    this.setState({
+      quote: quotes[Math.floor(Math.random() * quotes.length)]
+    });
+  }
+  
+  render() {
     return <div className="container">
         <div className="quote">
-          {quotes[Math.floor(Math.random() * quotes.length)]}
-          <br />
+          <a onClick={this.generateNewQuote}>{this.state.quote}</a>
           <span className="home-quote-person">- Gary Vaynerchuk</span>
         </div>
 

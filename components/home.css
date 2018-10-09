@@ -97,7 +97,6 @@
   animation-delay: 2.0s;
 }
 
-
 .leaves:nth-child(14) {
   animation-delay: 2.3s;
 }
@@ -112,6 +111,10 @@
 
 .leaves:nth-child(17) {
   animation-delay: 2.6s;
+}
+
+.leaves:nth-child(18) {
+  animation-delay: 2.7s;
 }
 
 @keyframes leafPaint {
